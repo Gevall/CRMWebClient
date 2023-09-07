@@ -1,0 +1,29 @@
+﻿@{
+    Layout = "_Layout";
+    Random rand = new Random();
+}
+<html>
+    <body>
+        <div class="container">
+            <h3>Проекты:</h3>
+         <div class="row">
+             <table class="table table-striped">
+                 <tbody>
+                     <tr>
+                         <th>
+                             Проект
+                         </th>
+                         <th>
+                             Описание
+                         </th>
+                     </tr>
+                    @for(int i = 0; i<10; i++)
+                    {
+                        <tr><td>Проект @i</td><td>Описание проекта @rand.Next(10)</td></tr>
+                    }
+                 </tbody>
+             </table>
+             </div>
+             </div>
+    </body>
+</html>
