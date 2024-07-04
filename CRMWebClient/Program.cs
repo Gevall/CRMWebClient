@@ -1,3 +1,4 @@
+using CRMWebClient.Controllers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 
@@ -5,6 +6,8 @@ namespace CRMWebClient
 {
     public class Program
     {
+        public static readonly ILoggerFactory logFactory = LoggerFactory.Create(conf => conf.AddConsole());
+
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
@@ -39,6 +42,9 @@ namespace CRMWebClient
                 });
             //builder.Services.AddControllersWithViews();
             builder.Services.AddMvc(option => option.EnableEndpointRouting = false);
+
+            builder.Services.AddHttpClient();
+            builder.Services.AddTransient<HomeController>();
 
             var app = builder.Build();
 

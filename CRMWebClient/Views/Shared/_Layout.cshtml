@@ -1,38 +1,40 @@
-﻿
-<html>
-<head>
-    <link href="~/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
-  <header>
-   <nav class="navbar navbar-text navbar-expand-lg" aria-label="Main">
-        <div class="container">
+﻿ <html>
+    <head>
+        <link href="~/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="~/css/popup.css">
+
+    </head>
+    <body>
+      <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
                 <a href="#" class="navbar-brand text-uppercase">CRM System 1.0</a>
-            <div class="collapse navbar-collapse" id="navbar">
-                 <ul class="navbar navbar-nav">
-                     <li class="nav-link">
-                        <a href="~/Home/Index">Главная </a>
-                      </li>
-                      <li class="nav-link">
-                        <a href="~/Home/ProjectView">Проекты </a>
-                     </li>
-                      <li class="nav-link">
-                        <a href="#">О нас </a>
-                     </li>
-                     <li class="nav-link">
-                        <a href="#">Контакты</a>
-                     </li>
-                     <li class="nav-link">
-                        <a href="#">Войти</a>
-                     </li>
-                </ul>
+                <div class="collapse navbar-collapse" id="navbar">
+                     <ul class="navbar navbar-nav">
+                         <li class="nav-link">
+                            <a href="~/Home/Index">Главная </a>
+                          </li>
+                          <li class="nav-link">
+                            <a href="~/Home/ProjectView">Проекты </a>
+                         </li>
+                          <li class="nav-link">
+                            <a href="#">Сотрудники </a>
+                         </li>
+                         <li class="nav-link">
+                            <a href="~/Home/TestWindow">Справочная информация</a>
+                         </li>
+                         <li class="nav-link">
+                            <a href="#">Войти</a>
+                         </li>
+                    </ul>
+                </div>
             </div>
+        </nav>
+      </header>
+        <div>
+            @RenderBody()
         </div>
-    </nav>
-  </header>
-    <div>
-        @RenderBody()
-    </div>
-    <script src="~/js/bootstrap.min.js"></script>
-</body>
-</html>
+        <script src="~/js/bootstrap.min.js"></script>
+        <script src="~/js/jquery-1.6.4.min.js"></script>
+    </body>
+  </html>
