@@ -106,7 +106,7 @@ namespace CRMWebClient.Controllers
             {
                 var jsonResult = await response.Content.ReadAsStringAsync();
                 employes = JsonSerializer.Deserialize<List<Employes>>(jsonResult);
-            }
+            }   
             return employes;
         }
 
@@ -122,5 +122,6 @@ namespace CRMWebClient.Controllers
                 .Result;
             return HttpStatusCode.OK;
         }
+
     }
 }
